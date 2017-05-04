@@ -1,7 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "https://boriswilhelms.github.io/"
 languageCode = "de-DE"
 title = "Boris Wilhelms"
 theme = "hugo-theme-minos"
+
+relativeURLs = true
 
 [params]
     Author = "Boris Wilhelms"

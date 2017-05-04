@@ -1,8 +1,7 @@
 +++
 date = "2017-05-03T12:45:42+02:00"
-draft = true
 title = "Access certificates in Azure"
-Categories = ["Reminder", "Azure"]
+Categories = ["Azure"]
 +++
 
 Thanks to this [Stackoverflow post](http://stackoverflow.com/questions/23827884/accessing-uploaded-certificates-in-azure-web-sites) for the tip. 
