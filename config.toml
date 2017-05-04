@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "de-DE"
+title = "Boris Wilhelms"
+theme = "hugo-theme-minos"
+
+[params]
+    Author = "Boris Wilhelms"
