@@ -4,6 +4,11 @@ title = "Boris Wilhelms"
 theme = "hugo-theme-minos"
 
 relativeURLs = true
+disableKinds = [""]
 
-[params]
+[[menu.main]]
+    name = "About me"
+    url = "/about"
+
+[Params]
     Author = "Boris Wilhelms"
