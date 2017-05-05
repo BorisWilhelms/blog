@@ -1,4 +1,4 @@
-baseURL = "https://boriswilhelms.github.io/"
+baseURL = "http://blog.wille-zone.de/"
 languageCode = "de-DE"
 title = "Boris Wilhelms"
 theme = "hugo-theme-minos"
