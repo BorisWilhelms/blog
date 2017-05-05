@@ -6,6 +6,8 @@ theme = "hugo-theme-minos"
 relativeURLs = true
 disableKinds = [""]
 
+googleAnalytics = "UA-98632338-1"
+
 [[menu.main]]
     name = "About me"
     url = "/about"
