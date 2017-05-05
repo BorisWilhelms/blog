@@ -1,6 +1,6 @@
 hugo
 cd .\public
-git add .
+git add -A
 git commit -m "Updated site"
 git push
 cd ..
