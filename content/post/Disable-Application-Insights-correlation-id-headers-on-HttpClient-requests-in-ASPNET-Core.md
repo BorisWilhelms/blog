@@ -1,5 +1,5 @@
 +++
-Description = ""
+Description = "How to disable Application Insights correlation id headers on HttpClient requests in ASP.NET Core."
 Keywords = ["Application Insights", "Correlation ID", "dependency tracking" ]
 Tags = ["Application Insights", "ASP.NET Core"]
 date = "2017-05-26T19:23:46+02:00"
@@ -54,6 +54,9 @@ if (module != null)
 }
 ```
 
+A full example project with all three possible ways can be found at [Github][demo-repo].
+
 [image1]: /images/AI-Correlation-IDs.PNG
 [dep-tracking-docs]: https://docs.microsoft.com/en-gb/azure/application-insights/app-insights-asp-net-dependencies
 [Github-Issue]: https://github.com/Microsoft/ApplicationInsights-aspnetcore/issues/416
+[demo-repo]: https://github.com/BorisWilhelms/AI-DependencyTracking/tree/master/src/AI-DependencyTracking

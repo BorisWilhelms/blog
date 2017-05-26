@@ -5,4 +5,7 @@ date = "2017-05-04T21:39:08+02:00"
 type = "content-page"
 +++
 
-I am working as a Software Developer / Consultant at [Thinktecture](http://www.thinktecture.com) in Frankfurt am Main / Germany.
+I am a passionate Software Developer / Consultant working at [Thinktecture](http://www.thinktecture.com) in Frankfurt am Main / Germany.
+
+You can contact via mail: mail@wille-zone.de.
+
