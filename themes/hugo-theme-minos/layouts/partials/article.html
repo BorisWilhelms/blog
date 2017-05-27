@@ -17,7 +17,7 @@
                     {{ if gt $i 0 }}
                     <span>&gt;</span>
                     {{ end }}
-                    <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
+                    <a class="article-category-link" href="/categories/{{ $e | urlize }}">{{ $e }}</a>
                     {{ end }}
                 </div>
             </div>
@@ -87,7 +87,7 @@
             <ul class="article-tag-list">
                 {{ range .Params.tags }}
                 <li class="article-tag-list-item">
-                    <a class="article-tag-list-link" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}
+                    <a class="article-tag-list-link" href="/tags/{{ . | urlize }}">{{ . }}
                     </a>
                 </li>
                 {{ end }}
