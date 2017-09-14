@@ -106,7 +106,7 @@ I have build a simple Angular application which queries the API endpoint and dis
 ![Client-Demo][client-demo-gif][Original size][client-demo-gif]
 
 # Conclusion
-As you can see it is very easy to create a simple web application with very few lines of code using Azure Functions. There is no need to include other SDKs or APIs, since the Azure Functions SDK comes with a attributes that integrated other Azure service very easy. 
+As you can see it is very easy to create a simple web application with very few lines of code using Azure Functions. There is no need to include other SDKs or APIs, since the Azure Functions SDK comes with attributes that integrated other Azure service very easy. 
 
 [github-repo]: https://github.com/BorisWilhelms/PhotoCloud
 [Container-Access-Policy]: https://docs.microsoft.com/en-us/azure/storage/blobs/storage-manage-access-to-resources
