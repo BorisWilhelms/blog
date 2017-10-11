@@ -6,7 +6,9 @@ date = "2017-10-10"
 title = "Dependency injection in Azure Functions on function level"
 +++
 
-Out of the box Azure Functions does not come with depdendency injection support you can use in your functions. There are quite a lot of ways to add dependency injection, but most of them rely on the Service Locator (anti-)pattern. In this post you will learn how to implement dependency injection on function level using the extensions API without the Service Locator (anti-)pattern.
+***This solution only supports transient and singleton scoped services. Please see my [follow up post][followup] where you learn how to implement proper dependency injection with support for scoped services.***
+
+Out of the box Azure Functions does not come with dependency injection support you can use in your functions. There are quite a lot of ways to add dependency injection, but most of them rely on the Service Locator (anti-)pattern. In this post you will learn how to implement dependency injection on function level using the extensions API without the Service Locator (anti-)pattern.
 
 # Goal
 The goal is to inject dependencies into our functions as a parameters.
@@ -41,7 +43,7 @@ public class InjectAttribute : Attribute
 
 # Extension Config Provider
 As the next and LAST step we need to create an extension config provider, which will be the heart of our dependency injection. 
-The provider registeres the `InjectAttribute` and handles the resolving of the requested type. 
+The provider registers the `InjectAttribute` and handles the resolving of the requested type. 
 It is very important that we bind to `dynamic` otherwise we need to create a binding for each type we want to inject.
 The `Initialize` method will be called on startup, when the runtime discovers the functions.
 Here I use `Microsoft.Extensions.DependencyInjection` but you can use what ever library you like.
@@ -73,4 +75,5 @@ As you see, it is very easy to add dependency injection on function level using 
 Besides dependency injection the extension API allows you to create all sorts of input and output bindings!
 You can find the full example on [GitHub][github-repo].
 
-[github-repo]: https://github.com/BorisWilhelms/azure-function-dependency-injection
+[followup]: /post/azure-functions-proper-dependency-injection/
+[github-repo]: https://github.com/BorisWilhelms/azure-function-dependency-injection/tree/a8e97b2c487b0b2180181acfe77c68d4e4b002d9
