@@ -9,7 +9,7 @@
                     <span class="archive-category">{{ .Title }}</span>
                 </div>
                 <div class="archives">
-                    {{ range .Data.Pages "Section" "post" }} {{ partial "li.html" . }} {{ end }}
+                    {{ range where .Data.Pages "Section" "post" }} {{ partial "li.html" . }} {{ end }}
                 </div>
             </section>
             {{ partial "pagination.html" . }}
