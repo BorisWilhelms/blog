@@ -1,15 +1,15 @@
 +++
 Description = "How to secure your Azure Function with a jwt token."
-Keywords = ["Azure", "Functions", "jwt", "security"]
+Keywords = ["Azure", "Functions", "jwt", "security", "openid", "oauth"]
 Tags = ["Azure", "Functions"]
 date = "2017-10-17"
-title = "Secure Azure Functions with JWT token"
+title = "Secure Azure Functions with JWT access tokens"
 +++
 ***I have completely rewritten this post. You can find the original post [here](/archive/secure-azure-functions-with-jwt-token).***
 
-Out of the box it is only possible to secure your Azure Functions via Function Keys (API-Keys), which sometimes might not fit into your requirements. When using HttpTrigger we luckily have access to the current request and are therefor able to implement our own custom authentication/authorization methods. You could for example use JWT tokens issued by an OpenID provider to control authentication/authorization. 
+Out of the box it is only possible to secure your Azure Functions via Function Keys (API-Keys), which sometimes might not fit into your requirements. When using HttpTrigger we luckily have access to the current request and are therefor able to implement our own custom authentication/authorization methods. You could for example use JWT access tokens issued by an OpenID provider to control authentication/authorization. 
 
-In this post you learn how to validate OpenID JWT tokens and controlling access to your Azure Function. 
+In this post you learn how to validate JWT access tokens and controlling access to your Azure Function. 
 
 First lets see the function.
 
@@ -32,7 +32,7 @@ public static class HelloWorldFunction
     }
 }
 ```
-It is very important that you set the authorization level to anonymous, since we want to skip all checks done by Azure Functions. Then we need to add the "authentication boilerplate code" to every function, we want to protect with OpenID JWT tokens. Unfortunately there is currently no generic way to add this, e.g. via attributes.
+It is very important that you set the authorization level to anonymous, since we want to skip all checks done by Azure Functions. Then we need to add the "authentication boilerplate code" to every function, we want to protect with JWT access tokens. Unfortunately there is currently no generic way to add this, e.g. via attributes.
 
 Now we need to implement the validation method. 
 
