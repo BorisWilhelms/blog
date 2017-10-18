@@ -9,20 +9,17 @@
             <a href="{{ .RelPermalink }}" class="article-date">
                 <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
             </a>
-            {{ $Site := .Site }}
-            {{ if .Params.categories }}
+            {{ $Site := .Site }} {{ if .Params.categories }}
             <div class="post-categories">
                 <div class="article-category">
-                    {{ range $i, $e := .Params.categories }}
-                    {{ if gt $i 0 }}
+                    {{ range $i, $e := .Params.categories }} {{ if gt $i 0 }}
                     <span>&gt;</span>
                     {{ end }}
                     <a class="article-category-link" href="/categories/{{ $e | urlize }}">{{ $e }}</a>
                     {{ end }}
                 </div>
             </div>
-            {{ end }}
-            {{ if .Site.Params.disqusShortname }}
+            {{ end }} {{ if .Site.Params.disqusShortname }}
             <div class="article-comment-link-wrap">
                 <a href="{{ .RelPermalink }}#disqus_thread" class="article-comment-link">Comments</a>
             </div>
@@ -32,24 +29,21 @@
             {{ .Content }}
         </div>
 
-        {{ if not .Params.notoc }}
-        {{ if .TableOfContents }}
-        <div class="article-toc" {{ if .Site.Params.SmartToc }}style="display:none;"{{ end }}>
+        {{ if not .Params.notoc }} {{ if .TableOfContents }}
+        <div class="article-toc" {{ if .Site.Params.SmartToc }}style="display:none;" {{ end }}>
             <h3>Contents</h3>
             {{ .TableOfContents }}
         </div>
-        {{ end }}
-        {{ end }}
-
-        {{ if .Site.Params.SmartToc }}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        {{ end }} {{ end }} {{ if .Site.Params.SmartToc }}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+            crossorigin="anonymous"></script>
         <script>
-            (function() {
+            (function () {
                 var $toc = $('#TableOfContents');
                 if ($toc.length > 0) {
                     var $window = $(window);
 
-                    function onScroll(){
+                    function onScroll() {
                         var currentScroll = $window.scrollTop();
                         var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
                         var id = "";
@@ -71,18 +65,14 @@
                     }
 
                     $window.on('scroll', onScroll);
-                    $(document).ready(function() {
+                    $(document).ready(function () {
                         $toc.find('a').parent('li').find('ul').hide();
                         onScroll();
                         document.getElementsByClassName('article-toc')[0].style.display = '';
                     });
                 }
             })();
-        </script>
-        {{ end }}
-
-
-        {{ if .Params.tags }}
+        </script> {{ end }} {{ if .Params.tags }}
         <footer class="article-footer">
             <ul class="article-tag-list">
                 {{ range .Params.tags }}

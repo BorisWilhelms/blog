@@ -2,7 +2,6 @@ baseURL = "https://blog.wille-zone.de/"
 languageCode = "en-US"
 title = "Boris Wilhelms // Coding Blog"
 theme = "hugo-theme-minos"
-
 relativeURLs = true
 disableKinds = [""]
 
@@ -14,6 +13,8 @@ googleAnalytics = "UA-98632338-1"
 
 [Params]
     Author = "Boris Wilhelms"
+    Description = "Boris Wilhelms blogging about Coding (C#, .NET), Cloud (Azure, Azure Functions) and other things"
+    Keywords = ["Azure", "Functions", "C#", "ASP.NET Core"]
 
 [blackfriday]
     hrefTargetBlank = true

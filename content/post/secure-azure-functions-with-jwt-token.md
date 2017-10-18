@@ -1,6 +1,6 @@
 +++
 Description = "How to secure your Azure Function with a jwt token."
-Keywords = ["Azure", "Functions", "jwt"]
+Keywords = ["Azure", "Functions", "jwt", "security"]
 Tags = ["Azure", "Functions"]
 date = "2017-10-17"
 title = "Secure Azure Functions with JWT token"
